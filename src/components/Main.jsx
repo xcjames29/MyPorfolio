@@ -21,12 +21,13 @@ export default function Main() {
     let [portfolio, setPortfolio] = useState([]);
 
     return (
-        <DataContext.Provider value={{
-            portfolio,
-            setPortfolio,
+        <Router>
+            <DataContext.Provider value={{
+                portfolio,
+                setPortfolio,
 
-        }}>
-            <Router>
+            }}>
+
                 <MainContainer>
                     <Header />
                     <Switch>
@@ -39,7 +40,8 @@ export default function Main() {
                         <Redirect to="/" />
                     </Switch>
                 </MainContainer>
-            </Router>
-        </DataContext.Provider>
+
+            </DataContext.Provider>
+        </Router>
     )
 }
