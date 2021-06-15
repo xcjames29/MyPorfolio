@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components"
 import DataContext from '../context/myData'
 import {
-    Router,
+    BrowserRouter as Router,
     Switch,
     Route,
     Redirect
@@ -34,9 +34,7 @@ export default function Main() {
                         <Route exact path="/" >
                             <Homepage />
                         </Route>
-                        <Route path="/about">
-                            <About />
-                        </Route>
+                        <Route path="/about" component={About} />
                         <Redirect to="/" />
                     </Switch>
                 </MainContainer>
