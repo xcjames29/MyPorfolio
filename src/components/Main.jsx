@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components"
 import DataContext from '../context/myData'
 import {
-    BrowserRouter as Router,
+    Router,
     Switch,
     Route,
     Redirect
